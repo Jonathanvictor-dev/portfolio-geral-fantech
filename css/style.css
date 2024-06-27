@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline-color: var(--cor-verde);
 }
 
 html {
@@ -22,10 +23,12 @@ body {
     font-family: var(--fonte-principal);
     font-size: 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: var(--cor-preta);
     color: var(--cor-verde);
+    overflow-x: hidden;
 }
 
 nav.container-menu {
@@ -39,7 +42,7 @@ nav.container-menu {
     padding: 2rem 0 2rem 0.2rem;
     overflow: hidden;
     transition: 0.5s;
-    width: 2.5rem; 
+    width: 2.5rem;
     z-index: 10000;
 }
 
@@ -124,7 +127,7 @@ li.lista-item a span.txt-link {
 
 li.lista-item a span.txt-link.show {
     opacity: 1;
-    max-height: 2rem; 
+    max-height: 2rem;
 }
 
 /* Conteúdo Principal */
@@ -180,26 +183,26 @@ p.conteudo-inicio-texto span {
     height: 250px;
     border-radius: 0.9rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     border-radius: 0.9rem;
-  }
+}
 
-  .autoplay-progress {
+.autoplay-progress {
     position: absolute;
     right: 16px;
     bottom: 16px;
@@ -211,9 +214,9 @@ p.conteudo-inicio-texto span {
     justify-content: center;
     font-weight: bold;
     color: var(--cor-verde);
-  }
+}
 
-  .autoplay-progress svg {
+.autoplay-progress svg {
     --progress: 0;
     position: absolute;
     left: 0;
@@ -227,42 +230,42 @@ p.conteudo-inicio-texto span {
     stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
-  }
+}
 
-  .swiper-button-next, 
-  .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: var(--cor-verde);
-  }
+}
 
-  .swiper-pagination-bullet {
+.swiper-pagination-bullet {
     background: var(--cor-verde);
-  }
+}
 
-  .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
     background: var(--cor-verde);
-  }
+}
 
-  /* Conteudo Sobre */
+/* Conteudo Sobre */
 
-  section.conteudo-sobre {
+section.conteudo-sobre {
     margin-top: 3rem;
-  }
+}
 
-  section.conteudo-sobre p.conteudo-sobre-texto {
+section.conteudo-sobre p.conteudo-sobre-texto {
     margin-top: 3rem;
     text-align: justify;
-  }
+}
 
-  section.conteudo-sobre-cards {
+section.conteudo-sobre-cards {
     margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     row-gap: 1rem;
     justify-content: space-between;
-  }
+}
 
-  section.conteudo-sobre-cards div.container-card {
+section.conteudo-sobre-cards div.container-card {
     color: var(--cor-verde);
     display: flex;
     flex-direction: column;
@@ -270,30 +273,140 @@ p.conteudo-inicio-texto span {
     justify-content: center;
     width: 48%;
     height: 8rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 0.9rem;
     border: 1px solid var(--cor-verde);
     transition: .5s;
     cursor: pointer;
-  }
-
-  section.conteudo-sobre-cards div.container-card:hover {
-    opacity: 0.5;
-  }
-
-div.container-card div.card-icone {
-    font-size: 4rem;
+    animation: boxShadowAnimacao 2s infinite;
 }
 
-  /* Ajuste do layout responsivo */
+section.conteudo-sobre-cards div.container-card:hover {
+    opacity: 0.5;
+}
 
-  @media screen and (min-width: 768px) {
+div.container-card div.card-icone {
+    font-size: 3rem;
+}
+
+/* Conteudo Projetos */
+
+section.conteudo-projetos {
+    margin-top: 3rem;
+}
+
+section.conteudo-projetos section.conteudo-projetos-detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.container-detalhes {
+    width: 100%;
+    background-color: var(--cor-verde);
+    color: var(--cor-preta);
+    border-radius: 0.9rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+    animation: boxShadowAnimacao 2s infinite;
+}
+
+section.conteudo-projetos-detalhes ul.detalhes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-left: 0.9rem;
+}
+
+ul.detalhes-lista li.detalhes-lista-item {
+    list-style: none;
+}
+
+ul.detalhes-lista li.detalhes-lista-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-preta);
+    transition: .5s;
+}
+
+ul.detalhes-lista li.detalhes-lista-item a:hover {
+    opacity: 0.5;
+}
+
+ul.detalhes-lista li.detalhes-lista-item a span {
+    display: flex;
+    justify-content: center;
+    width: 1.3rem;
+}
+
+/* Rodapé */
+
+footer.container-rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    border-top: 2px solid var(--cor-verde);
+    width: 100%;
+}
+
+footer.container-rodape p.rodape-titulo {
+    text-align: center;
+}
+
+footer.container-rodape p.rodape-subtitulo {
+    font-size: 0.6rem;
+    color: #ffffff85;
+}
+
+footer.container-rodape p.rodape-subtitulo a {
+    text-decoration: none;
+    color: #ffffff85;
+    transition: .5s;
+}
+
+footer.container-rodape p.rodape-subtitulo a:hover {
+    color: var(--cor-verde);
+}
+
+/* Animação */
+
+@keyframes boxShadowAnimacao {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0px 1px 2px var(--cor-verde), 0px -1px 2px var(--cor-verde), 1px 0px 2px var(--cor-verde), -1px 0px 2px var(--cor-verde);
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+/* Ajuste do layout responsivo */
+
+@media screen and (min-width: 768px) {
     .swiper {
         height: 350px;
-    }  
-  }
+    } 
 
-  @media screen and (min-width: 1024px) {
+    section.conteudo-projetos section.conteudo-projetos-detalhes {
+        justify-content: space-between;
+    }
+
+    .container-detalhes {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     main.container-conteudo {
         padding: 2rem 4rem;
     }
@@ -302,19 +415,19 @@ div.container-card div.card-icone {
         width: 20%;
         height: 10rem;
     }
-  }
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
     main.container-conteudo {
         padding: 2rem 6rem;
     }
 
     .swiper {
         height: 450px;
-      }
-  }
+    }
+}
 
-  @media screen and (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
     main.container-conteudo {
         padding: 2rem 12rem;
     }
@@ -327,4 +440,4 @@ div.container-card div.card-icone {
         width: 23%;
         height: 12rem;
     }
-  }
+}
