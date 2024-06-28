@@ -145,21 +145,11 @@ h2.conteudo-titulo {
 
 h2.conteudo-titulo a {
     text-decoration: none;
-    color: var(--cor-branca);
-    transition: 0.5s;
 }
 
-h2.conteudo-titulo span {
-    color: var(--cor-verde);
-    transition: 0.5s;
-}
-
-h2.conteudo-titulo a:hover {
-    color: var(--cor-verde);
-}
-
-h2.conteudo-titulo a span:hover {
-    color: var(--cor-branca);
+h2.conteudo-titulo a img {
+    width: 100px;
+    height: 100px;
 }
 
 section.conteudo-inicio {
