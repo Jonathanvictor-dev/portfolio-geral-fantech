@@ -327,6 +327,7 @@ ul.detalhes-lista li.detalhes-lista-item {
 ul.detalhes-lista li.detalhes-lista-item a {
     display: flex;
     align-items: center;
+    gap: 0.3rem;
     text-decoration: none;
     color: var(--cor-preta);
     transition: .5s;
