@@ -148,8 +148,8 @@ h2.conteudo-titulo a {
 }
 
 h2.conteudo-titulo a img {
-    width: 10%;
-    height: 6%;
+    width: 100px;
+    height: auto;
 }
 
 section.conteudo-inicio {
