@@ -148,7 +148,7 @@ h2.conteudo-titulo a {
 }
 
 h2.conteudo-titulo a img {
-    width: 100px;
+    width: 120px;
     height: auto;
 }
 
@@ -301,6 +301,10 @@ section.conteudo-projetos section.conteudo-projetos-detalhes {
     transition: .5s;
     cursor: pointer;
     animation: boxShadowAnimacao 2s infinite;
+}
+
+.container-detalhes-opacidade {
+    opacity: 0.1;
 }
 
 section.conteudo-projetos-detalhes ul.detalhes-lista {
