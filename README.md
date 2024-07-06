@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./img/fantechlogo.png" alt="Imagem do site, tela de início" width="150">
-</p>
-
 # Alunos - Técnico em Programação | Portfólio Geral
 ### Direcionamento deploy: [Portfólio Geral](https://portfolio-geral-fantech.vercel.app/)
 ### Seja direcionado para FAN.tech: [FAN.tech](https://fan-edu.com.br/fantech/)
