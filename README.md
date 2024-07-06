@@ -9,6 +9,8 @@
 ## Sobre 
 #### O portfólio da turma é destinado à divulgação dos projetos desenvolvidos na disciplina de Front-end. Aqui, você encontrará os projetos individuais dos alunos da turma de Técnico em Programação no período matutino
 
+<br>
+
 <p align="center">
   <img src="./img/portfolioGeralInicio.PNG" alt="Imagem do site, tela de início">
 </p>
@@ -19,5 +21,12 @@
   <img src="./img/portfolioGeralProjetos.PNG" alt="Imagem do site, tela de Projetos">
 </p>
 
-<hr style="margim-top: 0.5rem">
+## Tecnologias utilizadas 
+* HTML
+* CSS
+* JavaScript
 
+## Biblioteca 
+* Swiper.js - Carrosel
+* Font Awesome - Ícones
+* Bootstrap Icons - Ícones
