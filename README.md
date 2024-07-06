@@ -23,6 +23,6 @@
 * JavaScript
 
 ## Biblioteca 
-* Swiper.js - Carrosel
+* Swiper.js - Carrossel
 * Font Awesome - Ícones
 * Bootstrap Icons - Ícones
