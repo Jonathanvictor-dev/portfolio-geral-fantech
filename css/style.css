@@ -15,8 +15,13 @@
     outline-color: var(--cor-verde);
 }
 
-html {
-    scroll-behavior: smooth;
+::-webkit-scrollbar {
+    background-color: #bffe015b;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #BDFE01;
 }
 
 body {
@@ -148,7 +153,7 @@ h2.conteudo-titulo a {
 }
 
 h2.conteudo-titulo a img {
-    width: 120px;
+    width: 140px;
     height: auto;
 }
 
@@ -344,8 +349,9 @@ footer.container-rodape {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 0.3rem;
-    padding: 1rem 1rem 1rem 2.5rem;
+    padding: 1rem 1rem 1rem 3.5rem;
     border-top: 2px solid var(--cor-verde);
     width: 100%;
 }
@@ -409,6 +415,17 @@ footer.container-rodape p.rodape-subtitulo a:hover {
     section.conteudo-sobre-cards div.container-card {
         width: 20%;
         height: 10rem;
+    }
+
+    .container-detalhes {
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-height: 3em; /* Defina uma altura máxima padrão quando fechado */
+        position: relative;
+    }
+
+    details[open] {
+        max-height: 1000px; /* Ajuste conforme necessário */
     }
 }
 
